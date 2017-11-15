@@ -1,0 +1,55 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Jul 27 10:59:07 2017
+;; Desktop file format version 208
+;; Emacs version 25.1.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22905 22267 208286 0) (desktop . "208") "ThomasSun@sunweis-MacBook-Pro.local" nil nil ((((font-backend mac-ct) (fontsize . 0) (font . "-*-Ubuntu-normal-normal-normal-*-15-*-*-*-p-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#ffffff") (background-color . "#263238") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "#ff9800") (environment) (border-color . "#37474f") (frameset--id . "AA0D-3E9B-F2B8-CAF0") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "sunweis-MacBook-Pro.local") (explicit-name) (tool-bar-position . top) (height . 42) (width . 271) (left . 1282) (top + -249)) ((min-height . 8) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 15) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 136) (min-pixel-width . 140) (min-pixel-height-ignore . 68) (min-pixel-width-ignore . 105) (min-pixel-height-safe . 34) (min-pixel-width-safe . 28)) vc (pixel-width . 1913) (pixel-height . 697) (total-width . 273) (total-height . 41) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1913) (pixel-height . 561) (total-width . 273) (total-height . 33) (normal-height . 0.8048780487804879) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 952) (pixel-height . 561) (total-width . 136) (total-height . 33) (normal-height . 1.0) (normal-width . 0.49764767381076846) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 961) (pixel-height . 561) (total-width . 137) (total-height . 33) (normal-height . 1.0) (normal-width . 0.5023523261892315) (buffer "business_factory.py" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 727) (start . 1)))) (hc (last . t) (pixel-width . 1913) (pixel-height . 136) (total-width . 273) (total-height . 8) (normal-height . 0.1951219512195122) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 952) (pixel-height . 136) (total-width . 136) (total-height . 8) (normal-height . 1.0) (normal-width . 0.49764767381076846) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 1) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 961) (pixel-height . 136) (total-width . 137) (total-height . 8) (normal-height . 1.0) (normal-width . 0.5023523261892315) (buffer "*Messages*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 987) (start . 845))))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("font" "python" "tab"))
+(setq register-alist nil)
+(setq file-name-history '("/Users/ThomasSun/.emacs.d/init.el" "/Users/ThomasSun/CODEs/ALL_BACKEND/ALL_BRAND_NEW_WITH_3/APP_BACKEND/app_server_2.x/Server/app_backend_server_flask.py" "/Users/ThomasSun/.emacs.d/init.el" "/Users/ThomasSun/CODEs/ALL_BACKEND/ALL_BRAND_NEW_WITH_3/APP_BACKEND/app_server_2.x/Modules/Factory/business_factory.py" "/Users/ThomasSun/CODEs/ALL_BACKEND/ALL_BRAND_NEW_WITH_3/APP_BACKEND/app_server_2.x/Server/app_backend_server_flask.py"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/ThomasSun/.emacs.d/init.el"
+  "init.el"
+  'python-mode
+  '(eldoc-mode linum-mode elpy-mode company-mode highlight-indentation-mode yas-minor-mode flycheck-mode)
+  1
+  '(1322 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (2217 1369 1369 1 1618 1369 1369 346))))
+
+(desktop-create-buffer 208
+  "/Users/ThomasSun/CODEs/ALL_BACKEND/ALL_BRAND_NEW_WITH_3/APP_BACKEND/app_server_2.x/Server/app_backend_server_flask.py"
+  "app_backend_server_flask.py"
+  'python-mode
+  '(eldoc-mode linum-mode elpy-mode company-mode highlight-indentation-mode yas-minor-mode flycheck-mode)
+  1411
+  '(576 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (670 592 576 774 570 1411 1411))))
+
+(desktop-create-buffer 208
+  "/Users/ThomasSun/CODEs/ALL_BACKEND/ALL_BRAND_NEW_WITH_3/APP_BACKEND/app_server_2.x/Modules/Factory/business_factory.py"
+  "business_factory.py"
+  'python-mode
+  '(eldoc-mode linum-mode elpy-mode company-mode highlight-indentation-mode yas-minor-mode flycheck-mode)
+  727
+  '(2141 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1651 1578 1578 5333 6248 1037 968))))
+
