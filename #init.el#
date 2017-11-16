@@ -2,7 +2,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the
 
-;;        (evil   . (telephone-line-airline-position-segment)))
+;;   ;;        (evil   . (telephone-line-airline-position-segment)))     (evil   . (telephone-line-airline-position-segment)))
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)

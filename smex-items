@@ -1,0 +1,19 @@
+
+;; ----- smex-history -----
+(
+ load-file
+ paradox-list-packages
+ string-insert-rectangle
+ multi-compile-run
+ cd
+ 5x5
+ arp
+)
+
+;; ----- smex-data -----
+(
+ (load-file . 8)
+ (string-insert-rectangle . 7)
+ (paradox-list-packages . 12)
+ (multi-compile-run . 2)
+)

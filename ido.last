@@ -1,0 +1,34 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/" . "ThomasSun/")
+ ("/Users/ThomasSun/.emacs.d/" . "auto-save-list/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/ThomasSun/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "ido.last"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/ThomasSun/.emacs.d/" (23053 26016 76782 566000) "themes/" ".git/" "elpa/" "recentf" "paradox/" "init.el" ".emacs.desktop" "auto-save-list/" "recentf~" "ido.last~" "smex-items" "init.el~" "ido.last" "../" "./")
+
+ ("/Users/ThomasSun/" (23053 25753 48892 62000) "repo_exchange/" ".viminfo" ".bash_history" ".gitconfig" ".cache/" ".python_history" "Downloads/" ".oh-my-zsh/" ".Xauthority" ".kite/" ".gem/" ".vimbackup/" ".swt/" ".vimrc.before" "Documents/" "CODEs/" ".Trash/" ".emacs~" ".zsh-update" "Applications/" ".vimrc" ".vimviews/" "Movies/" ".ssh/" "rsa_public_key.pem" "xingye_URL.zip" ".codeintel/" "Public/" ".aria2/" ".vimrc.local" ".cups/" ".gitignore_global" ".cocoapods/" ".emacs.d/" "Calibre Library/" ".oracle_jre_usage/" ".zcompdump-孙伟’s MacBook Pro-5.3" ".matplotlib/" "Library/" "Desktop/" ".ipython/" ".zsh_history" ".zcompdump-孙伟’s MacBook Pro-5.2" ".rnd" ".atom/" "Pictures/" ".zshrc" ".spf13-vim-3/" ".subversion/" ".vimswap/" "rsa.key" ".sogouinput/" ".wget-hsts" ".hgignore_global" "test/" ".CFUserTextEncoding" "VirtualBox VMs/" ".electrum/" ".DS_Store" ".vim/" ".virtualenvs/" ".gemrc" "EBOOKs/" ".zcompdump-孙伟’s MacBook Pro-5.3.1" ".vimundo/" "Music/" ".config/" ".vimrc.bundles" "../" "./")
+
+ ("/Users/ThomasSun/.electrum/" (22819 51309 0 0) "wallets/" "recent_servers" "daemon" "certs/" "blockchain_headers.tmp" "blockchain_headers" "config" "../" "./")
+
+ ("/Users/" (22987 19692 180528 486000) "ThomasSun/" "Shared/" ".localized" "../" "./")
+
+ ("/Users/ThomasSun/.emacs.d/auto-save-list/" (23053 12699 385919 783000) "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
