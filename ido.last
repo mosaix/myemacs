@@ -2,12 +2,16 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/ThomasSun/CODEs/" . "9.134_Docker/")
+ ("/Users/ThomasSun/" . "CODEs/")
+ ("/Users/ThomasSun/.emacs.d/elpa/" . "switch-window/")
  ("/Users/" . "ThomasSun/")
  ("/Users/ThomasSun/.emacs.d/" . "auto-save-list/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/ThomasSun/"
  "/Users/ThomasSun/.emacs.d/"
 )
 
@@ -19,15 +23,23 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/ThomasSun/.emacs.d/" (23053 26016 76782 566000) "themes/" ".git/" "elpa/" "recentf" "paradox/" "init.el" ".emacs.desktop" "auto-save-list/" "recentf~" "ido.last~" "smex-items" "init.el~" "ido.last" "../" "./")
+ ("/Users/ThomasSun/.emacs.d/" (23054 37420 547267 583000) "themes/" ".git/" "elpa/" "recentf" "paradox/" "init.el" "url/" ".emacs.desktop" "auto-save-list/" "recentf~" "ido.last~" "init.el.backup" "smex-items" "init.el~" "ido.last" "../" "./")
 
- ("/Users/ThomasSun/" (23053 25753 48892 62000) "repo_exchange/" ".viminfo" ".bash_history" ".gitconfig" ".cache/" ".python_history" "Downloads/" ".oh-my-zsh/" ".Xauthority" ".kite/" ".gem/" ".vimbackup/" ".swt/" ".vimrc.before" "Documents/" "CODEs/" ".Trash/" ".emacs~" ".zsh-update" "Applications/" ".vimrc" ".vimviews/" "Movies/" ".ssh/" "rsa_public_key.pem" "xingye_URL.zip" ".codeintel/" "Public/" ".aria2/" ".vimrc.local" ".cups/" ".gitignore_global" ".cocoapods/" ".emacs.d/" "Calibre Library/" ".oracle_jre_usage/" ".zcompdump-孙伟’s MacBook Pro-5.3" ".matplotlib/" "Library/" "Desktop/" ".ipython/" ".zsh_history" ".zcompdump-孙伟’s MacBook Pro-5.2" ".rnd" ".atom/" "Pictures/" ".zshrc" ".spf13-vim-3/" ".subversion/" ".vimswap/" "rsa.key" ".sogouinput/" ".wget-hsts" ".hgignore_global" "test/" ".CFUserTextEncoding" "VirtualBox VMs/" ".electrum/" ".DS_Store" ".vim/" ".virtualenvs/" ".gemrc" "EBOOKs/" ".zcompdump-孙伟’s MacBook Pro-5.3.1" ".vimundo/" "Music/" ".config/" ".vimrc.bundles" "../" "./")
+ ("/Users/ThomasSun/" (23054 37275 116136 855000) "repo_exchange/" ".viminfo" ".bash_history" ".gitconfig" ".cache/" ".python_history" "Downloads/" ".oh-my-zsh/" ".Xauthority" ".kite/" ".gem/" ".vimbackup/" ".swt/" ".vimrc.before" "Documents/" "CODEs/" ".Trash/" ".emacs~" ".zsh-update" "Applications/" ".vimrc" ".vimviews/" "Movies/" ".ssh/" "rsa_public_key.pem" "xingye_URL.zip" ".codeintel/" "Public/" ".aria2/" ".vimrc.local" ".cups/" ".gitignore_global" ".cocoapods/" ".emacs.d/" "Calibre Library/" ".oracle_jre_usage/" ".zcompdump-孙伟’s MacBook Pro-5.3" ".matplotlib/" "Library/" "Desktop/" ".ipython/" ".zsh_history" ".zcompdump-孙伟’s MacBook Pro-5.2" ".rnd" ".atom/" "Pictures/" ".zshrc" ".spf13-vim-3/" ".subversion/" ".vimswap/" "rsa.key" ".sogouinput/" ".wget-hsts" ".hgignore_global" "test/" ".CFUserTextEncoding" "VirtualBox VMs/" ".electrum/" ".DS_Store" ".vim/" ".virtualenvs/" ".gemrc" "EBOOKs/" ".zcompdump-孙伟’s MacBook Pro-5.3.1" ".vimundo/" "Music/" ".config/" ".vimrc.bundles" "../" "./")
+
+ ("/Users/ThomasSun/.emacs.d/auto-save-list/" (23054 34724 882669 251000) ".saves-15687-sunweis-MacBook-Pro.local~" ".saves-9493-sunweis-MacBook-Pro.local~" "../" "./")
+
+ ("/Users/ThomasSun/CODEs/9.134_Docker/" (22711 54358 0 0) "BACKEND/" "../" "./")
+
+ ("/Users/ThomasSun/CODEs/" (23024 68 852490 782000) "python-patterns/" "testZMQ/" "Insurance/" "TEST_ZMQ/" "quill/" "CODEs.zip" "aria2.start" "PlayGround_Exercise/" "ALL_BACKEND_COMPILE/" "web_server_2.0/" "Test_XG/" "all_server_2017.01.17.tar/" "EmotionNote/" "ALL_BACKEND/" "tensorflow/" "pipeg/" "powerline/" "swift-2048/" "long_polling_example/" "testForCC/" "opencv_contrib/" "HausClock/" "Network/" "Playground_ios/" "clockWithSeconds/" "all_server_2017.01.17.tar.gz" "9.134_Docker/" "Compile_ENV/" "suggestion/" "Splitflap/" "Alarm-ios-swift/" "Calculator/" "aria2.conf" ".DS_Store" "leveldb/" "iterm/" "Real-time-face-recognition-in-python-using-opencv-/" "../" "./")
+
+ ("/Users/ThomasSun/.emacs.d/elpa/switch-window/" (23054 25924 919208 59000) "switch-window-mvborder.el" ".git/" ".gitignore" "README.md" "switch-window-asciiart.el" "switch-window.el" "snapshots/" "../" "./")
+
+ ("/Users/ThomasSun/.emacs.d/elpa/" (23054 25922 515337 943000) "popup-20160709.729/" "tabbar-20160524.1401/" "ido-completing-read+-20170820.3/" "magit-20171116.50/" "goto-chg-20170917.1200/" "telephone-line-20171109.1616/" "all-the-icons-dired-readme.txt" "dashboard-readme.txt" "powerline-evil-20151112.710/" "highlight-parentheses-20170809.1151/" "dash-20171028.854/" "smart-mode-line-readme.txt" "mode-icons-readme.txt" "smex-20151212.1409/" "telephone-line-readme.txt" "helm-20171106.429/" "spinner-1.7.3/" "zenburn-theme-readme.txt" "async-20171015.2239/" "zoom-readme.txt" "rich-minority-20170813.622/" "smex-readme.txt" "magit-popup-20171109.1438/" "tabbar-readme.txt" "dashboard-20170923.719/" "multi-compile-20160306.1423/" "paradox-20161117.502/" "evil-20171112.519/" "elscreen-20160613.251/" "archives/" "multi-compile-readme.txt" "helm-core-20171103.2225/" "page-break-lines-20171020.108/" "magit-readme.txt" "s-20171102.227/" "memoize-20170720.1802/" "switch-window/" "powerline-evil-readme.txt" "neotree-20170522.758/" "font-lock+-20170222.1755/" "doom-themes-20171114.813/" "powerline-20171023.750/" "smart-mode-line-20171013.849/" "highlight-parentheses-readme.txt" "zenburn-theme-20171109.926/" "elscreen-readme.txt" "all-the-icons-20171011.324/" "ido-completing-read+-readme.txt" "with-editor-20171006.352/" "mode-icons-20170216.620/" "hydra-20170924.2259/" "doom-themes-readme.txt" "neotree-readme.txt" "undo-tree-20170706.246/" "zoom-20171110.715/" "git-commit-20171007.346/" "../" "./")
 
  ("/Users/ThomasSun/.electrum/" (22819 51309 0 0) "wallets/" "recent_servers" "daemon" "certs/" "blockchain_headers.tmp" "blockchain_headers" "config" "../" "./")
 
  ("/Users/" (22987 19692 180528 486000) "ThomasSun/" "Shared/" ".localized" "../" "./")
-
- ("/Users/ThomasSun/.emacs.d/auto-save-list/" (23053 12699 385919 783000) "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

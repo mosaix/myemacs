@@ -1,8 +1,3 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the
-
-;;        (evil   . (telephone-line-airline-position-segment)))
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -11,52 +6,21 @@
 (set-face-attribute 'default nil :font "Envy Code R-14" )
 (set-frame-font "Envy Code R-14" nil t)
 
-
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
-
-;;(load-theme 'zenburn t)
-
 (require 'doom-themes)
 (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
       doom-themes-enable-italic t) ; if nil, italics is universally disabled
-
-;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
-;; may have their own settings.
 (load-theme 'doom-one t)
-
-;; Enable flashing mode-line on errors
 (doom-themes-visual-bell-config)
-
-;; Enable custom neotree theme
-(doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
-
-;; Corrects (and improves) org-mode's native fontification.
+(doom-themes-neotree-config)
 (doom-themes-org-config)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
- '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(package-selected-packages
-   (quote
-    (neotree zoom dashboard multi-compile elscreen tabbar doom-themes mode-icons telephone-line smart-mode-line powerline-evil helm smex ido-completing-read+ zenburn-theme paradox)))
- '(paradox-github-token t)
- '(zoom-size (quote size-callback)))
-
 (setq linum-format "%4d \u2502 ")
 (global-linum-mode 1)
-
-
-;;Interface Enhancement.
 
 (require 'ido)
 (ido-mode t)
@@ -65,170 +29,76 @@
 (require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
 
-(require 'smex) ; Not needed if you use package.el
-(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
-                  ; when Smex is auto-initialized on its first run.
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-(require 'icomplete)
-(icomplete-mode 1)
-
-(require 'helm)
-(require 'helm-config)
-
-;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
-;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
-;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-unset-key (kbd "C-x c"))
-
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
-(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
-(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
-
-(when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
-
-(setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
-      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
-      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
-      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
-      helm-ff-file-name-history-use-recentf t
-      helm-echo-input-in-header-line t)
-
-(defun spacemacs//helm-hide-minibuffer-maybe ()
-  "Hide minibuffer in Helm session if we use the header line as input field."
-  (when (with-helm-buffer helm-echo-input-in-header-line)
-    (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
-      (overlay-put ov 'window (selected-window))
-      (overlay-put ov 'face
-                   (let ((bg-color (face-background 'default nil)))
-                     `(:background ,bg-color :foreground ,bg-color)))
-      (setq-local cursor-type nil))))
-
-
-(add-hook 'helm-minibuffer-set-up-hook
-          'spacemacs//helm-hide-minibuffer-maybe)
-
-(setq helm-autoresize-max-height 0)
-(setq helm-autoresize-min-height 20)
-(helm-autoresize-mode 1)
-
-(helm-mode 1)
-
-;;(require 'powerline-evil)
-;;(powerline-evil-center-color-theme)
-
-
-;;(require 'powerline)
-;;(Powerline-center-evil-theme)
-;;(powerline-center-theme)
-
-(sml/setup)
-(setq sml/theme 'dark)
-(setq sml/no-confirm-load-theme t)
-
-;;(require 'telephone-line-config)
-;;(telephone-line-evil-config)
-
-(require 'telephone-line)
-(telephone-line-mode 1)
-(setq telephone-line-subseparator-faces '())
-(setq telephone-line-height 24
-      telephone-line-evil-use-short-tag t)
-(setq telephone-line-lhs
-      '((evil   . (telephone-line-evil-tag-segment))
-        (accent . (telephone-line-vc-segment
-                   telephone-line-erc-modified-channels-segment
-                   telephone-line-process-segment))
-        (nil    . (telephone-line-minor-mode-segment
-                   telephone-line-buffer-segment))))
-;;(setq telephone-line-rhs
-;;      '((nil    . (telephone-line-misc-info-segment))
-;;        (accent . (telephone-line-major-mode-segment))
-;;        (evil   . (telephone-line-airline-position-segment))))
-(require 'mode-icons)
-(mode-icons-mode)
-(setq mode-icons-desaturate-active t)
-
-(require 'tabbar)
-(tabbar-mode)
-
-(dolist (func '(tabbar-mode tabbar-forward-tab tabbar-forward-group tabbar-backward-tab tabbar-backward-group))
-      (autoload func "tabbar" "Tabs at the top of buffers and easy control-tab navigation"))
-    
-    (defmacro defun-prefix-alt (name on-no-prefix on-prefix &optional do-always)
-      `(defun ,name (arg)
-         (interactive "P")
-         ,do-always
-         (if (equal nil arg)
-             ,on-no-prefix
-           ,on-prefix)))
-    
-    (defun-prefix-alt shk-tabbar-next (tabbar-forward-tab) (tabbar-forward-group) (tabbar-mode 1))
-    (defun-prefix-alt shk-tabbar-prev (tabbar-backward-tab) (tabbar-backward-group) (tabbar-mode 1))
-    
-    (global-set-key [(control tab)] 'shk-tabbar-next)
-    (global-set-key [(control shift tab)] 'shk-tabbar-prev)
-
-
-(defadvice tabbar-buffer-tab-label (after fixup_tab_label_space_and_flag activate)
-   (setq ad-return-value
-         (if (and (buffer-modified-p (tabbar-tab-value tab))
-                  (buffer-file-name (tabbar-tab-value tab)))
-             (concat " + " (concat ad-return-value " "))
-           (concat " " (concat ad-return-value " ")))))
- 
- ;; Called each time the modification state of the buffer changed.
- (defun ztl-modification-state-change ()
-   (tabbar-set-template tabbar-current-tabset nil)
-   (tabbar-display-update))
- 
- ;; First-change-hook is called BEFORE the change is made.
- (defun ztl-on-buffer-modification ()
-   (set-buffer-modified-p t)
-   (ztl-modification-state-change))
- (add-hook 'after-save-hook 'ztl-modification-state-change)
- 
- ;; This doesn't work for revert, I don't know.
- ;;(add-hook 'after-revert-hook 'ztl-modification-state-change)
-(add-hook 'first-change-hook 'ztl-on-buffer-modification)
-
-(require 'multi-compile)
-    (setq multi-compile-alist '(
-        (rust-mode . (("rust-debug" . "cargo run")
-                      ("rust-release" . "cargo run --release")
-                      ("rust-test" . "cargo test")))
-        ))
-
-(require 'dashboard)
-(dashboard-setup-startup-hook)
-
-(setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
-(setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-;;                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
-
-(require 'zoom)
-(zoom-mode t)
-;;(custom-set-variables
-;; '(zoom-mode t))
-
 (global-set-key (kbd "C-x +") 'zoom)
 
-(require 'neotree)
-(global-set-key [f2] 'neotree-toggle)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
+(global-set-key (kbd "C-x 1") 'switch-window-then-maximize)
+(global-set-key (kbd "C-x 2") 'switch-window-then-split-below)
+(global-set-key (kbd "C-x 3") 'switch-window-then-split-right)
+(global-set-key (kbd "C-x 0") 'switch-window-then-delete)
+(setq switch-window-shortcut-style 'qwerty)
+(setq switch-window-qwerty-shortcuts
+      '("a" "s" "d" "f" "j" "k" "l" ";" "w" "e" "i" "o"))
+(setq switch-window-shortcut-appearance 'image)
 
-(windmove-default-keybindings 'meta)
+(add-hook 'foo-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x C-g") 'magit-dispatch-popup)
+;;(require 'icicles)
+;;(icy-mode 1)
+
+(nyan-mode 1)
+(nyan-start-animation)
+
+;; HELM Config start
+
+(require 'helm-config)
+(helm-mode 1)
+
+;;HELM config End.
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(package-selected-packages
+   (quote
+    (dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
+ '(paradox-github-token t)
+ '(zoom-size (quote (0.618 . 0.618))))
+
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
+(require 'paradox)
+(paradox-enable)
+
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+(require 'dired-k)
+(define-key dired-mode-map (kbd "K") 'dired-k)
+
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
