@@ -1,20 +1,25 @@
 
 ;; ----- smex-history -----
 (
- dired-k
+ dumb-jump-mode
  paradox-list-packages
- load-file
- string-insert-rectangle
- multi-compile-run
- cd
- 5x5
+ origami-mode
+ helm-ag
+ counsel-ag
+ term
+ dired-k
 )
 
 ;; ----- smex-data -----
 (
  (load-file . 9)
  (string-insert-rectangle . 7)
- (paradox-list-packages . 14)
+ (paradox-list-packages . 25)
  (multi-compile-run . 2)
  (dired-k . 1)
+ (term . 1)
+ (counsel-ag . 1)
+ (helm-ag . 5)
+ (origami-mode . 1)
+ (dumb-jump-mode . 1)
 )

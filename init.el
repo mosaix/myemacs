@@ -2,6 +2,10 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+(beacon-mode 1)
 
 (set-face-attribute 'default nil :font "Envy Code R-14" )
 (set-frame-font "Envy Code R-14" nil t)
@@ -33,6 +37,7 @@
 
 (require 'switch-window)
 (global-set-key (kbd "C-x o") 'switch-window)
+(beacon-mode 1)
 (global-set-key (kbd "C-x 1") 'switch-window-then-maximize)
 (global-set-key (kbd "C-x 2") 'switch-window-then-split-below)
 (global-set-key (kbd "C-x 3") 'switch-window-then-split-right)
@@ -66,7 +71,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
+    (dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
  '(paradox-github-token t)
  '(zoom-size (quote (0.618 . 0.618))))
 
@@ -76,7 +81,7 @@
 (require 'paradox)
 (paradox-enable)
 
-(ivy-mode 1)
+(ivy-mode 0)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 (global-set-key "\C-s" 'swiper)
@@ -99,6 +104,25 @@
 (require 'dired-k)
 (define-key dired-mode-map (kbd "K") 'dired-k)
 
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+(add-hook 'after-init-hook 'global-company-mode)
+
+(require 'origami)
+
+(global-flycheck-mode)
+
+(dumb-jump-mode)
+;;Adding (dumb-jump-mode) to your .emacs will enable the key bindings for two interactive Dumb Jump functions:
+
+;;dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
+;;dumb-jump-back C-M-p jumps back to where you were when you jumped. These are chained so if you go down a rabbit hole you can get back out or where you want to be.
+;;dumb-jump-quick-look C-M-q like dumb-jump-go but shows tooltip with file, line, and context
+;;dumb-jump-go-other-window exactly like dumb-jump-go but uses find-file-other-window instead of find-file
+;;dumb-jump-go-prefer-external like dumb-jump-go but will prefer definitions not in the current buffer
+;;dumb-jump-go-prefer-external-other-window expected combination of dumb-jump-go-prefer-external and dumb-jump-go-other-window
+;;dumb-jump-go-prompt exactly like dumb-jump-go but prompts user for function to jump to instead of using symbol at point
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -106,3 +130,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;;<prefix> <key>
+;;<prefix> c    - create workgroup
+;;<prefix> A    - rename workgroup
+;;<prefix> k    - kill workgroup
+;;<prefix> v    - switch to workgroup
+;;<prefix> C-s  - save session
+;;<prefix> C-f  - load session
+(require 'workgroups2)
+;; Change some settings
+(workgroups-mode 1)
+
