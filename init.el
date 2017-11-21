@@ -71,7 +71,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
+    (yasnippet anaconda-mode dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
  '(paradox-github-token t)
  '(zoom-size (quote (0.618 . 0.618))))
 
@@ -123,6 +123,14 @@
 ;;dumb-jump-go-prefer-external like dumb-jump-go but will prefer definitions not in the current buffer
 ;;dumb-jump-go-prefer-external-other-window expected combination of dumb-jump-go-prefer-external and dumb-jump-go-other-window
 ;;dumb-jump-go-prompt exactly like dumb-jump-go but prompts user for function to jump to instead of using symbol at point
+
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(electric-pair-mode t)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
