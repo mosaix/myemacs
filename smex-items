@@ -1,10 +1,10 @@
 
 ;; ----- smex-history -----
 (
+ paradox-list-packages
  helm-do-ag
  helm-ag
  counsel-ag
- paradox-list-packages
  dumb-jump-mode
  origami-mode
  term
@@ -14,7 +14,7 @@
 (
  (load-file . 9)
  (string-insert-rectangle . 7)
- (paradox-list-packages . 27)
+ (paradox-list-packages . 31)
  (multi-compile-run . 2)
  (dired-k . 1)
  (term . 1)
