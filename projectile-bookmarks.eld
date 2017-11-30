@@ -1,0 +1,1 @@
+("~/CODEs/python-patterns/" "~/.emacs.d/")

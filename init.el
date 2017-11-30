@@ -73,7 +73,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (counsel-projectile org yasnippet anaconda-mode dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
+    (markdown-mode counsel-projectile org yasnippet anaconda-mode dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
  '(paradox-github-token t)
  '(zoom-size (quote (0.618 . 0.618))))
 

@@ -2,19 +2,19 @@
 ;; ----- smex-history -----
 (
  paradox-list-packages
+ org-mode
  helm-do-ag
  helm-ag
  counsel-ag
  dumb-jump-mode
  origami-mode
- term
 )
 
 ;; ----- smex-data -----
 (
  (load-file . 9)
  (string-insert-rectangle . 7)
- (paradox-list-packages . 31)
+ (paradox-list-packages . 32)
  (multi-compile-run . 2)
  (dired-k . 1)
  (term . 1)
@@ -23,4 +23,5 @@
  (origami-mode . 1)
  (dumb-jump-mode . 1)
  (helm-do-ag . 3)
+ (org-mode . 1)
 )
