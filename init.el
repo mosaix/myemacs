@@ -172,4 +172,5 @@
 ;; Change some settings
 (workgroups-mode 1)
 (setq org-agenda-files (list "~/CODEs/emacs_org/TODOs.org"))
-
+(global-unset-key (kbd "C-SPC"))
+(global-set-key (kbd "M-SPC") 'set-mark-command)
