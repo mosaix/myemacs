@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
+ load-file
+ org-agenda
  paradox-list-packages
+ package-install
+ org-todo
  org-mode
  helm-do-ag
- helm-ag
- counsel-ag
- dumb-jump-mode
- origami-mode
 )
 
 ;; ----- smex-data -----
 (
- (load-file . 9)
+ (load-file . 11)
  (string-insert-rectangle . 7)
- (paradox-list-packages . 32)
+ (paradox-list-packages . 34)
  (multi-compile-run . 2)
  (dired-k . 1)
  (term . 1)
@@ -24,4 +24,7 @@
  (dumb-jump-mode . 1)
  (helm-do-ag . 3)
  (org-mode . 1)
+ (org-todo . 2)
+ (org-agenda . 10)
+ (package-install . 1)
 )

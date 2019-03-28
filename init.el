@@ -1,3 +1,4 @@
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -6,9 +7,15 @@
   (exec-path-from-shell-initialize))
 
 (beacon-mode 1)
+;(set-fontset-font "fontset-default" 'Han '("STHeiti"))
+(dolist (charset '(kana han cjk-misc bopomofo))
+    (set-fontset-font "fontset-default" charset
+                      (font-spec :family "STKaiti")))
 
-(set-face-attribute 'default nil :font "Envy Code R-14" )
-(set-frame-font "Envy Code R-14" nil t)
+(set-default-font "Source Code Pro 18")
+
+;(set-face-attribute 'default nil :font "Envy Code R-14" )
+;(set-frame-font "Envy Code R-14" nil t)
 
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
@@ -20,7 +27,7 @@
 (load-theme 'doom-one t)
 (doom-themes-visual-bell-config)
 (doom-themes-neotree-config)
-(doom-themes-org-config)
+;(doom-themes-org-config)
 
 
 (setq linum-format "%4d \u2502 ")
@@ -71,9 +78,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(org-agenda-files (quote ("~/CODEs/emacs_org/TODOs.org")))
  '(package-selected-packages
    (quote
-    (markdown-mode counsel-projectile org yasnippet anaconda-mode dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
+    (cnfonts markdown-mode counsel-projectile org yasnippet anaconda-mode dumb-jump flycheck origami workgroups2 company expand-region beacon helm-ag exec-path-from-shell counsel dired-k ivy nyan-mode icicles rainbow-delimiters switch-window zoom zenburn-theme telephone-line tabbar smex smart-mode-line powerline-evil paradox neotree multi-compile mode-icons magit ido-completing-read+ highlight-parentheses helm elscreen doom-themes dashboard)))
  '(paradox-github-token t)
  '(zoom-size (quote (0.618 . 0.618))))
 
@@ -163,4 +171,5 @@
 (require 'workgroups2)
 ;; Change some settings
 (workgroups-mode 1)
+(setq org-agenda-files (list "~/CODEs/emacs_org/TODOs.org"))
 
